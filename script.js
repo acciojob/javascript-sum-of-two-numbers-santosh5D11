@@ -1,4 +1,20 @@
-let input1 = prompt("Enter the first number:");
-let input2 = prompt("Enter the second number:");
+let firstNumber = prompt("First number:");
+let secondNumber = prompt("Second number:");
 
-// Write your code here and print the output using alert function
+if (
+  firstNumber === null ||
+  secondNumber === null ||
+  firstNumber.trim() === "" ||
+  secondNumber.trim() === "" ||
+  isNaN(firstNumber) ||
+  isNaN(secondNumber)
+) {
+  alert("Invalid input. Please enter a valid number.");
+} else {
+  firstNumber = Number(firstNumber);
+  secondNumber = Number(secondNumber);
+
+  let sum = firstNumber + secondNumber;
+
+  alert(`The sum of ${firstNumber} and ${secondNumber} is ${sum}.`);
+}
